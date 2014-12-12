@@ -34,6 +34,7 @@ def main():
             for action, elem in tree:
                 if elem.tag == "body":
                     f.write(elem.text.encode('utf-8'))
+                    f.write("/*/*/")
 
     print(count)
     f.close()
