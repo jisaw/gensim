@@ -29,7 +29,7 @@ def main():
     for car in car_makes:
         print(car)
         files = os.listdir(car)
-        for f in files:
+        for f in files[1:]:
             tree = etree.parse(open(str(car + f), 'r'))
             root = tree.getroot()
             print(root.findall('body').tag)
