@@ -23,7 +23,8 @@ def main():
     car_makes = []
     for (dirpath, dirnames, filenames) in os.walk('../../edmunds/data/run001'):
         car_makes.append(str(dirpath))
-    print(car for car in car_makes)
+    for car in car_makes:
+        print(car)
     print os.listdir(car_makes[2])
 
 
