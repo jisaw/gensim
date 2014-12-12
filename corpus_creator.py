@@ -30,7 +30,7 @@ def main():
         print(car)
         files = os.listdir(car)
         for f in files:
-            tree = etree.parse(open(str(car + f), 'r'))
+            tree = etree.parse(open(str(car +"/" + f), 'r'))
             root = tree.getroot()
             print(root.findall('body').tag)
             count += 1
