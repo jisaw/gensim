@@ -20,9 +20,10 @@ def stream_dict(filen):
 def main():
     print "hello"
     current_dir = os.getcwd()
-    car_makes = os.listdir('../../edmunds/data/run001')
-    for dir in car_makes:
-        print(dir)
+    car_makes = []
+    for (dirpath, dirnames, filenames) in os.walk('../../edmunds/data/run001'):
+        car_makes.append(dirnames)
+    print(dirnames)
 
 
 if __name__ is "__main__":
