@@ -2,6 +2,8 @@ __author__ = 'jakesawyer'
 
 from gensim import corpora, models, similarities
 import sys, os
+import pandas as pd
+import numpy as np
 
 class MyCorpus(object):
     def __init__(self, fn):
@@ -25,9 +27,14 @@ def main():
         car_makes.append(str(dirpath))
     for car in car_makes:
         print(car)
-    files =  os.listdir(car)
-    for file in files:
-        print(file)
+        files =  os.listdir(car)
+        for file in files:
+            df = pd.read_json(car+file)
+            f = open("cars.txt", "a")
+            for i in df['body']:
+                f.write(str(i))
+            f.close()
+
 
 
 if __name__ == "__main__":
