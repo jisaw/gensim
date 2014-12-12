@@ -25,16 +25,18 @@ def main():
     for (dirpath, dirnames, filenames) in os.walk('../../edmunds/data/run001'):
         car_makes.append(str(dirpath))
     count =0
-    # f = open("cars.txt", "a")
+    f = open("cars.txt", "a")
     for car in car_makes[1:]:
         print(car)
         files = os.listdir(car)
         for f in files:
             tree = etree.iterparse(open(str(car +"/" + f), 'r'))
             for action, elem in tree:
-                print(elem.tag)
+                if elem.tag == "body":
+                    f.write(str(elem.text))
 
     print(count)
+    f.close()
         #for thread in files:
             #df = pd.read_json(car+thread)
             #for i in df['body']:
