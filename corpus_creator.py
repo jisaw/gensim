@@ -2,6 +2,7 @@ __author__ = 'jakesawyer'
 
 from gensim import corpora, models, similarities
 import sys, os
+from lxml import etree
 
 class MyCorpus(object):
     def __init__(self, fn):
@@ -29,7 +30,9 @@ def main():
         print(car)
         files = os.listdir(car)
         for f in files:
-            print(str(car + f))
+            tree = etree.parse(open(str(car + f), 'r'))
+            root = tree.getroot()
+            print(root.findall('body').tag)
             count += 1
     print(count)
         #for thread in files:
