@@ -33,7 +33,7 @@ def main():
             tree = etree.iterparse(open(str(car +"/" + f), 'r'))
             for action, elem in tree:
                 print(elem.tag)
-                print(elem.id)
+
     print(count)
         #for thread in files:
             #df = pd.read_json(car+thread)

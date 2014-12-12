@@ -40,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/corpus_creator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.63235295" vertical-offset="138" max-vertical-offset="780">
-              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+              <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
               <folding>
                 <element signature="e#27#75#0" expanded="true" />
               </folding>
@@ -396,7 +396,7 @@
     <entry file="file://$PROJECT_DIR$/corpus_creator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.63235295" vertical-offset="138" max-vertical-offset="780">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
           <folding>
             <element signature="e#27#75#0" expanded="true" />
           </folding>
