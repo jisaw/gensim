@@ -25,7 +25,9 @@ def main():
         car_makes.append(str(dirpath))
     for car in car_makes:
         print(car)
-    print os.listdir(car_makes[2])
+    files =  os.listdir(car)
+    for file in files:
+        print(file)
 
 
 if __name__ == "__main__":
