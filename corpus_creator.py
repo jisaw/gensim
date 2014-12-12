@@ -29,8 +29,8 @@ def main():
     for car in car_makes[1:]:
         print(car)
         files = os.listdir(car)
-        for f in files:
-            tree = etree.iterparse(open(str(car +"/" + f), 'r'))
+        for fl in files:
+            tree = etree.iterparse(open(str(car +"/" + fl), 'r'))
             for action, elem in tree:
                 if elem.tag == "body":
                     f.write(str(elem.text))
