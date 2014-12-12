@@ -28,7 +28,7 @@ def main():
         print(car)
         files = os.listdir(car)
         for f in files:
-            print(f)
+            print(str(car + f))
         #for thread in files:
             #df = pd.read_json(car+thread)
             #for i in df['body']:
