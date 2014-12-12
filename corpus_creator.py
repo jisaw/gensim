@@ -20,7 +20,7 @@ def stream_dict(filen):
 def main():
     print "hello"
     current_dir = os.getcwd()
-    car_makes = os.listdir('../../edmunds/data/run001/')
+    car_makes = os.listdir('../../edmunds/data/run001')
     for dir in car_makes:
         print(dir)
 
