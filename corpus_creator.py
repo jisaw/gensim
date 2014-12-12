@@ -18,7 +18,7 @@ def stream_dict(filen):
     print("\n\n\n\n\n COMAPCTING \n\n\n\n\n")
     dictionary.compactify()
     print("\n\n\n\n\n SAVING \n\n\n\n\n\n")
-    dictionary.save('/dictionary/cars.dict')
+    dictionary.save('cars.dict')
     print(dictionary)
 
 def main():
