@@ -35,6 +35,7 @@ def main():
                 if elem.tag == "body":
                     f.write(elem.text.encode('utf-8'))
                     f.write("/*/*/")
+                    count += 1
 
     print(count)
     f.close()
