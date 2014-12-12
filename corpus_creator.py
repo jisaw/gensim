@@ -30,10 +30,10 @@ def main():
         print(car)
         files = os.listdir(car)
         for f in files:
-            tree = etree.parse(open(str(car +"/" + f), 'r'))
-            root = tree.getroot()
-            print root.children()
-            count += 1
+            tree = etree.iterparse(open(str(car +"/" + f), 'r'))
+            for action, elem in tree:
+                print(elem.tag)
+                print(elem.id)
     print(count)
         #for thread in files:
             #df = pd.read_json(car+thread)
