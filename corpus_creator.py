@@ -32,7 +32,7 @@ def main():
         for f in files:
             tree = etree.parse(open(str(car +"/" + f), 'r'))
             root = tree.getroot()
-            print(root.findall('body').tag)
+            print(root.text)
             count += 1
     print(count)
         #for thread in files:
