@@ -28,9 +28,9 @@ def main():
     f = open("cars.txt", "a")
     for car in car_makes:
         print(car)
-        files =  os.listdir(car)
-        for file in files:
-            df = pd.read_json(car+file)
+        files = os.listdir(car)
+        for thread in files:
+            df = pd.read_json(car+thread)
             for i in df['body']:
                 f.write(str(i))
     f.close()
