@@ -21,7 +21,7 @@ def main():
     print "hello"
     current_dir = os.getcwd()
     car_makes = []
-    for (dirpath, dirnames, filenames) in os.walk('../../edmunds/data/run001/'):
+    for (dirpath, dirnames, filenames) in os.walk('../../edmunds/data/run001'):
         car_makes.append(str(dirpath))
     print(car_makes)
     print os.listdir(car_makes[0])
