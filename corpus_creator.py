@@ -13,9 +13,12 @@ class MyCorpus(object):
             yield dictionary.doc2bow(line.lower().split())
 
 def stream_dict(filen):
+    print("\n\n\n\n\n STARTING \n\n\n\n\n")
     dictionary = corpora.Dictionary(line.lower().split("/*/*/") for line in open(filen))
+    print("\n\n\n\n\n COMAPCTING \n\n\n\n\n")
     dictionary.compactify()
-    dictionary.save('/dictionary/%s_dict'%filen)
+    print("\n\n\n\n\n SAVING \n\n\n\n\n\n")
+    dictionary.save('/dictionary/cars.dict')
     print(dictionary)
 
 def main():
