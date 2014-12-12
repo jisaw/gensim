@@ -25,15 +25,15 @@ def main():
     car_makes = []
     for (dirpath, dirnames, filenames) in os.walk('../../edmunds/data/run001'):
         car_makes.append(str(dirpath))
+    f = open("cars.txt", "a")
     for car in car_makes:
         print(car)
         files =  os.listdir(car)
         for file in files:
             df = pd.read_json(car+file)
-            f = open("cars.txt", "a")
             for i in df['body']:
                 f.write(str(i))
-            f.close()
+    f.close()
 
 
 
