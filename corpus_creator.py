@@ -26,10 +26,10 @@ def main():
         car_makes.append(str(dirpath))
     count =0
     # f = open("cars.txt", "a")
-    for car in car_makes:
+    for car in car_makes[1:]:
         print(car)
         files = os.listdir(car)
-        for f in files[1:]:
+        for f in files:
             tree = etree.parse(open(str(car + f), 'r'))
             root = tree.getroot()
             print(root.findall('body').tag)
