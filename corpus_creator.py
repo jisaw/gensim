@@ -33,7 +33,7 @@ def main():
             tree = etree.iterparse(open(str(car +"/" + fl), 'r'))
             for action, elem in tree:
                 if elem.tag == "body":
-                    f.write(str(elem.text))
+                    f.write(elem.text)
 
     print(count)
     f.close()
