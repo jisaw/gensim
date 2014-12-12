@@ -39,7 +39,7 @@ def main():
 #
     #print(count)
     #f.close()
-    stream_dict('cars.text')
+    stream_dict('cars.txt')
         #for thread in files:
             #df = pd.read_json(car+thread)
             #for i in df['body']:
