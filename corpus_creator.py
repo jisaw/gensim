@@ -24,7 +24,7 @@ def main():
     for (dirpath, dirnames, filenames) in os.walk('../../edmunds/data/run001'):
         car_makes.append(str(dirpath))
     print(car_makes)
-    print os.listdir(car_makes[0])
+    print os.listdir(car_makes[2])
 
 
 if __name__ == "__main__":
