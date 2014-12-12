@@ -23,7 +23,7 @@ def main():
     car_makes = []
     for (dirpath, dirnames, filenames) in os.walk('../../edmunds/data/run001/'):
         car_makes.append(dirnames)
-    print(dirnames)
+    print(car_makes)
 
 
 if __name__ == "__main__":
