@@ -13,32 +13,33 @@ class MyCorpus(object):
             yield dictionary.doc2bow(line.lower().split())
 
 def stream_dict(filen):
-    dictionary = corpora.Dictionary(line.lower().split() for line in open('%s'%filen))
+    dictionary = corpora.Dictionary(line.lower().split("/*/*/") for line in open(filen))
     dictionary.compactify()
     dictionary.save('/dictionary/%s_dict'%filen)
     print(dictionary)
 
 def main():
-    print "hello"
-    current_dir = os.getcwd()
-    car_makes = []
-    for (dirpath, dirnames, filenames) in os.walk('../../edmunds/data/run001'):
-        car_makes.append(str(dirpath))
-    count =0
-    f = open("cars.txt", "a")
-    for car in car_makes[1:]:
-        print(car)
-        files = os.listdir(car)
-        for fl in files:
-            tree = etree.iterparse(open(str(car +"/" + fl), 'r'))
-            for action, elem in tree:
-                if elem.tag == "body":
-                    f.write(elem.text.encode('utf-8'))
-                    f.write("/*/*/")
-                    count += 1
-
-    print(count)
-    f.close()
+    #print "hello"
+    #current_dir = os.getcwd()
+    #car_makes = []
+    #for (dirpath, dirnames, filenames) in os.walk('../../edmunds/data/run001'):
+    #    car_makes.append(str(dirpath))
+    #count =0
+    #f = open("cars.txt", "a")
+    #for car in car_makes[1:]:
+    #    print(car)
+    #    files = os.listdir(car)
+    #    for fl in files:
+    #        tree = etree.iterparse(open(str(car +"/" + fl), 'r'))
+    #        for action, elem in tree:
+    #            if elem.tag == "body":
+    #                f.write(elem.text.encode('utf-8'))
+    #                f.write("/*/*/")
+    #                count += 1
+#
+    #print(count)
+    #f.close()
+    stream_dict('cars.text')
         #for thread in files:
             #df = pd.read_json(car+thread)
             #for i in df['body']:
