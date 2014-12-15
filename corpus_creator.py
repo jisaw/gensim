@@ -6,7 +6,7 @@ import sys, os
 from lxml import etree
 import argparse
 
-DICTIONARY = corpora.Dictionary.load('cars.dict')
+#DICTIONARY = corpora.Dictionary.load('cars.dict')
 
 class MyCorpus(object):
     def __init__(self, fn):
