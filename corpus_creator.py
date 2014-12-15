@@ -6,10 +6,12 @@ import sys, os
 from lxml import etree
 import argparse
 
+DICTIONARY = corpora.Dictionary.load('cars.dict')
+
 class MyCorpus(object):
     def __init__(self, fn, dictionary):
         self.fn = fn
-        self.dictionary = corpora.Dictionary.load(dictionary)
+        self.dictionary = dictionary
 
     def __iter__(self, fn, dictionary):
         for line in open(self.fn):
@@ -54,7 +56,7 @@ def main():
     elif args.dict:
         stream_dict(args.dict)
     elif args.corp:
-        mem_friendly_corpus = MyCorpus('cars.txt', 'cars.dict')
+        mem_friendly_corpus = MyCorpus('cars.txt', DICTIONARY)
         for vector in mem_friendly_corpus:
             print(vector)
 
