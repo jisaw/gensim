@@ -65,10 +65,13 @@ def corpi():
 def main():
     args = parse_args()
     if args.text:
+        print('Creating text')
         create_text(args.text_file_name)
     elif args.dict:
+        print('Creating dict')
         stream_dict(args.dict)
     elif args.corp:
+        print('Creating corpi')
         corpi()
 
 
