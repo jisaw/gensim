@@ -49,7 +49,7 @@ def create_text(name):
 
 
 def corpi():
-    dict = Dictionary.load_from_text('cars.dict')
+    dict = Dictionary.load_from_text('cars.txt')
     print(dict)
 
         # f = open("cars.txt", 'r')
