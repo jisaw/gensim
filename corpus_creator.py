@@ -12,8 +12,8 @@ class MyCorpus(object):
     def __init__(self, fn):
         self.fn = fn
 
-    def __iter__(self, fn):
-        for line in open(self.fn):
+    def __iter__(self):
+        for line in open('cars.txt'):
             yield dictionary.doc2bow(line.lower().split())
 
 def stream_dict(filen):
@@ -49,7 +49,7 @@ def create_text(name):
 
 
 def corpi():
-    mem_friendly_corpus = MyCorpus('cars.txt')
+    mem_friendly_corpus = MyCorpus()
     for vector in mem_friendly_corpus:
         print(vector)
 
