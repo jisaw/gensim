@@ -1,6 +1,6 @@
 __author__ = 'jakesawyer'
 
-from gensim.corpora import dictionary
+from gensim.corpora import Dictionary
 from gensim import corpora, models, similarities
 import sys, os
 from lxml import etree
@@ -14,7 +14,7 @@ class MyCorpus(object):
 
     def __iter__(self):
         for line in open(self.fn):
-            yield dictionary.doc2bow(line.lower().split())
+            yield Dictionary.doc2bow(line.lower().split())
 
 def stream_dict(filen):
     print("\n\n\n\n\n STARTING \n\n\n\n\n")
