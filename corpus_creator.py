@@ -6,7 +6,7 @@ import sys, os
 from lxml import etree
 import argparse
 
-#Dict = Dictionary.load('cars.dict')
+
 
 class MyCorpus(object):
     def __init__(self, fn):
@@ -49,9 +49,8 @@ def create_text(name):
 
 
 def corpi():
-    mem_friendly_corpus = MyCorpus('cars.txt')
-    for vector in mem_friendly_corpus:
-        print(vector)
+    dict = Dictionary.load_from_text('cars.dict')
+    print(dict)
 
         # f = open("cars.txt", 'r')
         #corpus = [dictionary.doc2bow(line.lower().split("/*/*/")) for line in open("cars.txt")]
