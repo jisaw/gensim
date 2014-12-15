@@ -7,13 +7,13 @@ from lxml import etree
 import argparse
 
 class MyCorpus(object):
-    def __init__(self, fn, dict):
+    def __init__(self, fn, dictionary):
         self.fn = fn
-        self.dict = dict
+        self.dictionary = corpora.Dictionary.load(dictionary)
 
-    def __iter__(self, fn, dict):
+    def __iter__(self, fn, dictionary):
         for line in open(self.fn):
-            yield dict.doc2bow(line.lower().split())
+            yield dictionary.doc2bow(line.lower().split())
 
 def stream_dict(filen):
     print("\n\n\n\n\n STARTING \n\n\n\n\n")
@@ -54,9 +54,13 @@ def main():
     elif args.dict:
         stream_dict(args.dict)
     elif args.corp:
+        mem_friendly_corpus = MyCorpus('cars.txt', 'cars.dict')
+        for vector in mem_friendly_corpus:
+            print(vector)
+
         #f = open("cars.txt", 'r')
-        corpus = [dictionary.doc2bow(line.lower().split("/*/*/")) for line in open("cars.txt")]
-        corpora.MmCorpus.serialize(args.corp, corpus)
+        #corpus = [dictionary.doc2bow(line.lower().split("/*/*/")) for line in open("cars.txt")]
+        #corpora.MmCorpus.serialize(args.corp, corpus)
         #for thread in files:
             #df = pd.read_json(car+thread)
             #for i in df['body']:
