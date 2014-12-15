@@ -68,7 +68,7 @@ def parse_args():
     This class handles all of the command line parsing.
     :return: results object containing all of the args
     """
-    parser = argparse()
+    parser = argparse.ArgumentParser()
     parser.add_argument('--text', action="store", dest='text', const="text")
     parser.add_argument('--dict', action="store", dest="dict")
     parser.add_argument('--corpus', action='store', dest='corp')
