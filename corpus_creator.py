@@ -48,6 +48,20 @@ def create_text(name):
     f.close()
 
 
+def corpi():
+    mem_friendly_corpus = MyCorpus('cars.txt')
+    for vector in mem_friendly_corpus:
+        print(vector)
+
+        # f = open("cars.txt", 'r')
+        #corpus = [dictionary.doc2bow(line.lower().split("/*/*/")) for line in open("cars.txt")]
+        #corpora.MmCorpus.serialize(args.corp, corpus)
+        #for thread in files:
+        #df = pd.read_json(car+thread)
+        #for i in df['body']:
+        #    f.write(str(i))
+
+
 def main():
     args = parse_args()
     if args.text:
@@ -55,17 +69,7 @@ def main():
     elif args.dict:
         stream_dict(args.dict)
     elif args.corp:
-        mem_friendly_corpus = MyCorpus('cars.txt')
-        for vector in mem_friendly_corpus:
-            print(vector)
-
-        #f = open("cars.txt", 'r')
-        #corpus = [dictionary.doc2bow(line.lower().split("/*/*/")) for line in open("cars.txt")]
-        #corpora.MmCorpus.serialize(args.corp, corpus)
-        #for thread in files:
-            #df = pd.read_json(car+thread)
-            #for i in df['body']:
-            #    f.write(str(i))
+        corpi()
 
 
 def parse_args():
