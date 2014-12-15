@@ -6,15 +6,15 @@ import sys, os
 from lxml import etree
 import argparse
 
-#DICTIONARY = corpora.Dictionary.load('cars.dict')
+Dict = Dictionary.load('cars.dict')
 
 class MyCorpus(object):
     def __init__(self, fn):
         self.fn = fn
 
     def __iter__(self):
-        for line in open(self.fn):
-            yield Dictionary.doc2bow(line.lower().split())
+        #for line in open(self.fn):
+            yield Dictionary.doc2bow(Dict)
 
 def stream_dict(filen):
     print("\n\n\n\n\n STARTING \n\n\n\n\n")
