@@ -13,8 +13,8 @@ class MyCorpus(object):
         self.fn = fn
 
     def __iter__(self):
-        #for line in open(self.fn):
-            yield Dictionary.doc2bow(Dict)
+        for line in open('cars.dict'):
+            yield Dictionary.doc2bow(line.lower().split())
 
 def stream_dict(filen):
     print("\n\n\n\n\n STARTING \n\n\n\n\n")
