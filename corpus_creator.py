@@ -54,8 +54,8 @@ def main():
     elif args.dict:
         stream_dict(args.dict)
     elif args.corp:
-        f = open("cars.txt", 'r')
-        corpus = [dictionary.doc2bow(text) for text in f.read().lower().split('/*/*/')]
+        #f = open("cars.txt", 'r')
+        corpus = [dictionary.doc2bow(line.lower().split("/*/*/")) for line in open("cars.txt")]
         corpora.MmCorpus.serialize(args.corp, corpus)
         #for thread in files:
             #df = pd.read_json(car+thread)
