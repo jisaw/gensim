@@ -9,11 +9,10 @@ import argparse
 DICTIONARY = corpora.Dictionary.load('cars.dict')
 
 class MyCorpus(object):
-    def __init__(self, fn, dictionary):
+    def __init__(self, fn):
         self.fn = fn
-        self.dictionary = dictionary
 
-    def __iter__(self, fn, dictionary):
+    def __iter__(self, fn):
         for line in open(self.fn):
             yield dictionary.doc2bow(line.lower().split())
 
