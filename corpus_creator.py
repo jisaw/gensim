@@ -55,7 +55,7 @@ def main():
     elif args.dict:
         stream_dict(args.dict)
     elif args.corp:
-        mem_friendly_corpus = MyCorpus('cars.txt', DICTIONARY)
+        mem_friendly_corpus = MyCorpus('cars.txt')
         for vector in mem_friendly_corpus:
             print(vector)
 

@@ -39,8 +39,8 @@
       <file leaf-file-name="corpus_creator.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/corpus_creator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34313726" vertical-offset="0" max-vertical-offset="1335">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.5882353" vertical-offset="495" max-vertical-offset="1335">
+              <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
               <folding>
                 <element signature="e#27#64#0" expanded="true" />
               </folding>
@@ -449,8 +449,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/corpus_creator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34313726" vertical-offset="0" max-vertical-offset="1335">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.5882353" vertical-offset="495" max-vertical-offset="1335">
+          <caret line="57" column="49" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
           <folding>
             <element signature="e#27#64#0" expanded="true" />
           </folding>
