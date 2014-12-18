@@ -9,25 +9,14 @@ import argparse
 
 
 class MyCorpus(object):
-    def __init__(self, fn):
-        self.fn = fn
-
     def __iter__(self):
-        for line in open('cars.dict'):
+        #f = open('cars.dict', 'r')
+        for line.lower().split('/*/*/') in open('cars.txt'):
             yield Dictionary.doc2bow(line.lower().split())
 
 def stream_dict(filen):
     print("\n\n\n\n\n STARTING \n\n\n\n\n")
-    f = open(filen, 'r')
-    documents = []
-    for line in f.read():
-        documents += line.lower()
-    stoplist = set('for a of the end to in'.split())
-    texts = [[word for word in document.lower().split() if word not in stoplist]for document in documents]
-    all_tokens = sum(texts, [])
-    tokens_once = set(word for word in set(all_tokens) if all_tokens.count(word) == 1)
-    texts = [[word for word in text if word not in tokens_once] for text in texts]
-    dictionary = corpora.Dictionary(texts)
+    dictionary = corpora.Dictionary(line.lower().split() for line in open('cars.txt').lower().split("/*/*/"))
     print("\n\n\n\n\n COMAPCTING \n\n\n\n\n")
     dictionary.compactify()
     print("\n\n\n\n\n SAVING \n\n\n\n\n\n")
@@ -58,8 +47,9 @@ def create_text(name):
 
 
 def corpi():
-    dict = Dictionary.load('cars.dict')
-    print(dict)
+    corpmf = MyCorpus()
+    for vector in corpmf:
+        print(vector)
 
         # f = open("cars.txt", 'r')
         #corpus = [dictionary.doc2bow(line.lower().split("/*/*/")) for line in open("cars.txt")]
