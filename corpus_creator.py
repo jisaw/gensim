@@ -11,7 +11,7 @@ import argparse
 class MyCorpus(object):
     def __iter__(self):
         #f = open('cars.dict', 'r')
-        for line.lower().split('/*/*/') in open('cars.txt'):
+        for line in open('cars.txt'):
             yield Dictionary.doc2bow(line.lower().split())
 
 def stream_dict(filen):
