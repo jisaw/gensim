@@ -21,7 +21,7 @@ def stream_dict(filen):
     f = open(filen, 'r')
     documents = []
     for line in f.read():
-        documents += line.lower
+        documents += line.lower()
     stoplist = set('for a of the end to in'.split())
     texts = [[word for word in document.lower().split() if word not in stoplist]for document in documents]
     all_tokens = sum(texts, [])
@@ -31,7 +31,7 @@ def stream_dict(filen):
     print("\n\n\n\n\n COMAPCTING \n\n\n\n\n")
     dictionary.compactify()
     print("\n\n\n\n\n SAVING \n\n\n\n\n\n")
-    dictionary.save(filen[0:-4] + '.dict')
+    dictionary.save("cars2.dict")
     print(dictionary)
     return dictionary
 
