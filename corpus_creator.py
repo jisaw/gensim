@@ -18,7 +18,7 @@ class MyCorpus(object):
 
 def stream_dict(filen):
     print("\n\n\n\n\n STARTING \n\n\n\n\n")
-    f = open(filen, r)
+    f = open(filen, 'r')
     for line in open(f):
         documents += line.lower
     documents = [line.lower().split("/*/*/") for line in open(filen)]
