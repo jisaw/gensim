@@ -18,7 +18,10 @@ class MyCorpus(object):
 
 def stream_dict(filen):
     print("\n\n\n\n\n STARTING \n\n\n\n\n")
-    documents = line.lower().split("/*/*/") for line in open(filen)
+    f = open(filen, r)
+    for line in open(f):
+        documents += line.lower
+    documents = [line.lower().split("/*/*/") for line in open(filen)]
     stoplist = set('for a of the end to in'.split())
     texts = [[word for word in document.lower().split() if word not in stoplist]for document in documents]
     all_tokens = sum(texts, [])
