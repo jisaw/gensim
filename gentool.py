@@ -26,7 +26,7 @@ def generate_text(run_number):
     count = 0
     print("[+] Creating generator")
     for car in car_makes[1:]:
-        print(car)
+        print("[+]", car)
         files = os.listdir(car)
         for fl in files:
             tree = etree.iterparse(open(str(car + "/" + fl), 'r'))
