@@ -9,10 +9,13 @@ import argparse
 
 
 class MyCorpus(object):
+    def __init__(self, dictionary):
+        self.dictionary = dictionary
     def __iter__(self):
-        #f = open('cars.dict', 'r')
-        for line in open('cars.txt'):
-            yield Dictionary.doc2bow(line.lower().split())
+        f = open('cars2.dict', 'r')
+        f = f.read()
+        for line in f.lower().split('/*/*/'):
+            yield self.dictionary.doc2bow(line.lower().split())
 
 def stream_dict(filen):
     f = open(filen)
@@ -72,6 +75,7 @@ def main():
         stream_dict(args.dict)
     elif args.corp:
         print('Creating corpi')
+        dictionary = Dictionary.load('cars2.txt')
         corpi()
 
 
