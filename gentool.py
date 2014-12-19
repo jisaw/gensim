@@ -33,7 +33,7 @@ def generate_text(run_number):
             for action, elem in tree:
                 if elem.tag == "body":
                     yield elem.text.encode('utf-8')
-    print("[+] Documents generator complete\n[+] Number of documents: %s", % count)
+    print("[+] Documents generator complete\n[+] Number of documents: %s" % count)
 
 
 def build_dict(filen, generator):
